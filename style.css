@@ -45,13 +45,6 @@ body {
    position: sticky; 
 }
 
-/* .nav-container .name {
-    font-size: 30px;
-    color: #63b6f3;
-    padding: 15px;
-    font-weight: 100;
-} */
-
 .logo-container {
     height: 100px;
     width: 100px;
@@ -70,11 +63,6 @@ body {
 }
 
 
-.about {
-    /* margin-top: 100px; */
-    height: 500px;
-    /* border: 1px solid greenyellow; */
-}
 
 .contact {
     color: #63b6f3 ;
@@ -87,7 +75,7 @@ body {
     font-weight: 200;
     margin-bottom: 4.8rem;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-    /* align-self: flex-start; */
+    justify-self: start;
 }
 
 
@@ -95,20 +83,19 @@ body {
     color: whitesmoke;
     font-size: 80px;
     font-weight: 600;
-    padding: 15px;
-    
 }
 
 .description {
     color: #CCD6F6;
     font-size: 20px;
-    margin: 30px 0;
+    word-wrap: break-word;
 }
 
 .about {
-    display: flex;
-    flex-direction: column;
+    height: 500px;
+    display: grid;
     padding: 15px;
-    align-items: center;    
+    word-wrap: break-word;
+
 }
 
