@@ -48,6 +48,8 @@ body {
 .logo-container {
     height: 100px;
     width: 100px;
+    display: grid;
+    align-items: center;
 }
 
 .logo-container img {
@@ -73,29 +75,33 @@ body {
     border: 1px solid;
     font-size: 14px;
     font-weight: 200;
-    margin-bottom: 4.8rem;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-    justify-self: start;
+    /* justify-self: start;s */
+    align-self: center;
+    margin-top: 20px;
 }
 
 
 .name {
     color: whitesmoke;
-    font-size: 80px;
+    font-size: 6.5vw;
     font-weight: 600;
+    height: auto;
+    margin: 0;
 }
 
 .description {
     color: #CCD6F6;
-    font-size: 20px;
+    font-size: 1.8vw;
     word-wrap: break-word;
 }
 
 .about {
-    height: 500px;
     display: grid;
-    padding: 15px;
+    padding: 25px;
     word-wrap: break-word;
-
+    grid-gap: 15px;
+    justify-items: center;
+    margin-top: 30px;
 }
 
