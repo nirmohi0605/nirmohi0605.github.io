@@ -84,7 +84,7 @@ body {
     font-weight: 200;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     align-self: start;
-    width: 15%;
+    max-width: 15%;
     margin-top: 20px;
     grid-row: 3 / -1;    
 }
