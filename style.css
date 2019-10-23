@@ -15,14 +15,23 @@ body {
     background-color: var(--dark-navy);
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-    
 
+
+}
+button:hover {
+    background-color: #42c9ff12;
+    transform: scale(1.04);
+    cursor: pointer;
 }
 
 .nav-link {
     color: var(--pink-gray);
 }
 
+.nav-link > a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .nav-container ol {
     list-style: none;
@@ -34,6 +43,12 @@ body {
 
 .nav-container ol li {
     counter-increment: counter-item;
+
+}
+
+.nav-link:hover {
+    color: var(--blue-jeans);
+    cursor: pointer;
 }
 
 .nav-container ol li::before {
@@ -113,6 +128,7 @@ body {
     grid-template-rows: repeat(3, minmax(120px, 1fr));
     align-items: center;
     margin-top: 30px;
+    height: 80vh;
 }
 
 .resume-button {
@@ -132,17 +148,18 @@ body {
 
 .projects {
     margin: 50px;
+    padding-top: 20px;
 }
 
 .projects h3 {
     text-align: center;
     color: whitesmoke;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .project-cards {
-    display: grid;   
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
 }
 
@@ -153,7 +170,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform .2s;
+    border-radius: 3px;
 }
+
+.project-card:hover {
+    transform: scale(1.035);
+}
+
 .project-card .project-name {
     color: var(--pink-gray);
     text-align: center;
@@ -161,8 +185,9 @@ body {
 
 .project-card .project-description {
     color: var(--pink-gray);
-    
+
 }
+
 .project-card header {
     display: grid;
     grid-gap: 10px;
@@ -180,9 +205,11 @@ body {
     color: var(--slate);
     font-size: 12px
 }
+
 .action-buttons {
     text-align: center;
 }
+
 .action-buttons button {
     color: var(--blue-jeans);
     background: transparent;
@@ -193,4 +220,8 @@ body {
     font-size: 12px;
     font-weight: 200;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+}
+
+.action-buttons button:hover {
+    background-color: #42c9ff12;
 }
