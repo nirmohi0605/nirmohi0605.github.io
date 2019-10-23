@@ -4,33 +4,32 @@
 
 :root {
     --dark-navy: #0A192F;
+    --light-navy: #172A45;
     --blue-jeans: #63b6f3;
     --pink-gray: #CCD6F6;
     --whitesmoke: whitesmoke;
-  }
+    --slate: #8892B0;
+}
 
 body {
     background-color: var(--dark-navy);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: grid;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    
 
 }
 
 .nav-link {
-    color:var(--pink-gray);
+    color: var(--pink-gray);
 }
 
-
-
-/* ol li::before {
-    color: mediumslateblue;
-} */
 
 .nav-container ol {
     list-style: none;
     counter-reset: counter-item;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     font-weight: 100;
+    font-size: 13px;
 }
 
 .nav-container ol li {
@@ -49,7 +48,8 @@ body {
     grid-template-columns: 1fr;
     grid-auto-flow: column;
     align-items: center;
-   position: sticky; 
+    padding: 0 20px;
+    position: sticky;
 }
 
 .logo-container {
@@ -74,7 +74,7 @@ body {
 
 
 .contact {
-    color: var(--blue-jeans) ;
+    color: var(--blue-jeans);
     background: transparent;
     border-color: var(--blue-jeans);
     padding: 1rem 1rem;
@@ -86,14 +86,14 @@ body {
     align-self: start;
     max-width: 15%;
     margin-top: 20px;
-    grid-row: 3 / -1;    
+    grid-row: 3 / -1;
 }
 
 
 .name {
     color: var(--whitesmoke);
     font-size: 3.2rem;
-    font-weight: 600;
+    font-weight: 450;
     height: auto;
     margin: 0;
     grid-column: span 3;
@@ -104,14 +104,93 @@ body {
     font-size: 1.6rem;
 }
 
-.about {
+.hero {
     display: grid;
     padding: 25px;
     grid-gap: 15px;
-    justify-content: center;
+    justify-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, minmax(120px, 1fr));
     align-items: center;
     margin-top: 30px;
 }
 
+.resume-button {
+
+    color: var(--blue-jeans);
+    background: transparent;
+    border-color: var(--blue-jeans);
+    padding: 0.8rem 1rem;
+    border-radius: 3px;
+    border: 1px solid;
+    font-size: 13px;
+    font-weight: 200;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+}
+
+/* Project Section */
+
+.projects {
+    margin: 50px;
+}
+
+.projects h3 {
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 50px;
+}
+
+.project-cards {
+    display: grid;   
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+
+.project-card {
+    padding: 20px;
+    background-color: var(--light-navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project-card .project-name {
+    color: var(--pink-gray);
+    text-align: center;
+}
+
+.project-card .project-description {
+    color: var(--pink-gray);
+    
+}
+.project-card header {
+    display: grid;
+    grid-gap: 10px;
+    margin-bottom: 40px;
+}
+
+.project-card footer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.project-card footer li {
+    list-style: none;
+    color: var(--slate);
+    font-size: 12px
+}
+.action-buttons {
+    text-align: center;
+}
+.action-buttons button {
+    color: var(--blue-jeans);
+    background: transparent;
+    border-color: var(--blue-jeans);
+    padding: 0.8rem 1rem;
+    border-radius: 3px;
+    border: 1px solid;
+    font-size: 12px;
+    font-weight: 200;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+}
