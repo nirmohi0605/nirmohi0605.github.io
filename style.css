@@ -162,7 +162,7 @@ button:hover {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, minmax(120px, 1fr));
     align-items: center;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .resume-button {
@@ -236,11 +236,16 @@ button:hover {
     margin-bottom: 40px;
 }
 
+.project-card footer {
+    text-align: center;
+}
 
 .project-card footer ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+    grid-gap: 10px;
+    padding: 0;
 }
 
 .project-card footer li {
