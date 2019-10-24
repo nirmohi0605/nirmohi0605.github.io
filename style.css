@@ -2,7 +2,22 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
+    --dark-navy: #ffffff;
+    --light-navy: #e6e9f1;
+    --blue-jeans: #007BFF;
+    --pink-gray: #444452;
+    --whitesmoke: #444452;
+    --slate: #444452;
+    --mono-font: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    --pro-font: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    --mono-font: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+
+}
+
+[data-theme="dark"] {
     --dark-navy: #0A192F;
     --light-navy: #172A45;
     --blue-jeans: #63b6f3;
@@ -13,11 +28,27 @@
 
 body {
     background-color: var(--dark-navy);
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: var(--mono-font);
 
 
 }
+span.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate(  0.0deg) }
+     10% { transform: rotate(-10.0deg) }
+     20% { transform: rotate( 12.0deg) }
+     30% { transform: rotate(-10.0deg) }
+     40% { transform: rotate(  9.0deg) }
+     50% { transform: rotate(  0.0deg) }
+    100% { transform: rotate(  0.0deg) }
+  }
 button:hover {
     background-color: #42c9ff12;
     transform: scale(1.04);
@@ -36,7 +67,6 @@ button:hover {
 .nav-container ol {
     list-style: none;
     counter-reset: counter-item;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     font-weight: 100;
     font-size: 13px;
 }
@@ -92,12 +122,12 @@ button:hover {
     color: var(--blue-jeans);
     background: transparent;
     border-color: var(--blue-jeans);
+    font-family: var(--mono-font);
     padding: 1rem 1rem;
     border-radius: 3px;
     border: 1px solid;
     font-size: 14px;
     font-weight: 200;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     align-self: start;
     max-width: 15%;
     margin-top: 20px;
@@ -107,16 +137,23 @@ button:hover {
 
 .name {
     color: var(--whitesmoke);
+    font-family: var(--pro-font);
     font-size: 3.2rem;
-    font-weight: 450;
+    font-weight: bold;
+    line-height: 1.1;
     height: auto;
     margin: 0;
     grid-column: span 3;
+    letter-spacing: 0.1em;  
 }
 
 .description {
     color: var(--pink-gray);
     font-size: 1.6rem;
+    font-family: var(--pro-font);
+    letter-spacing: 0.1em;  
+
+
 }
 
 .hero {
@@ -141,25 +178,28 @@ button:hover {
     border: 1px solid;
     font-size: 13px;
     font-weight: 200;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: var(--mono-font);
+
 }
 
 /* Project Section */
 
 .projects {
     margin: 50px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 
 .projects h3 {
     text-align: center;
-    color: whitesmoke;
+    color: var(--whitesmoke);
     margin-bottom: 40px;
+    font-family: var(--pro-font);
+    letter-spacing: 0.1em;
 }
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 20px;
 }
 
@@ -181,10 +221,14 @@ button:hover {
 .project-card .project-name {
     color: var(--pink-gray);
     text-align: center;
+    font-family: var(--pro-font);
+    letter-spacing: 0.1em;
 }
 
 .project-card .project-description {
     color: var(--pink-gray);
+    font-family: var(--pro-font);
+    line-height: 1.5;
 
 }
 
@@ -208,9 +252,11 @@ button:hover {
 
 .action-buttons {
     text-align: center;
+
 }
 
 .action-buttons button {
+    font-family: var(--mono-font);
     color: var(--blue-jeans);
     background: transparent;
     border-color: var(--blue-jeans);
@@ -219,9 +265,80 @@ button:hover {
     border: 1px solid;
     font-size: 12px;
     font-weight: 200;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 }
 
 .action-buttons button:hover {
     background-color: #42c9ff12;
 }
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  
+    em {
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .sun {
+    background: url('switch/sun.svg') no-repeat center;
+    background-size: 100%;
+  }
+  .moon {
+    background: url('switch/moon.svg') no-repeat center;
+    background-size: 100%;
+  }
+
+  .sun, .moon {
+    width: 17px;
+    height: 17px;
+  }

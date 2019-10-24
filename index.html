@@ -17,10 +17,10 @@
                 <img src="logo.png" alt="logo">
             </div>
         </div>
-        <div class="nav-links">
+        <!-- <div class="nav-links">
             <ol class="nav-list">
                 <li class="nav-link" onclick="scrollToProj()">Projects</li>
-                <li class="nav-link">About</li>
+                <li class="nav-link" onclick="scrollToAbout()">About</li>
                 <li class="nav-link">
                     <a href="https://www.github.com/nirmohi0605/" target="_blank">
                         Github
@@ -35,11 +35,19 @@
 
             </ol>
         </div>
-        <button class="resume-button">Resume</button>
+        <button class="resume-button">Resume</button> -->
+        <div class="theme-switch-wrapper">
+            <div class="sun" id="sun"></div>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <div class="moon" id="moon"></div>
+        </div>
     </section>
     <section class="hero">
 
-        <p class="name">Hi, my name is Nirmohi.</p>
+        <p class="name">Hi, my name is Nirmohi <span class="wave">👋</span></p>
         <p class="description">I'm a Software Developer based in Toronto, Canada.</p>
         <button class="contact">Get in Touch</button>
 
@@ -174,15 +182,58 @@
 
         </div>
     </section>
+    <section class="about" id="about">
+        <h3>About</h3>
+        <div class="about-text">
+
+        </div>
+        <div class="picture">
+
+        </div>
+    </section>
     <script>
         const scrollToProj = () => {
-            console.log("clicked");
             let el = document.getElementById('projects');
             el.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
         }
+
+        const scrollToAbout = () => {
+            console.log("abou")
+            let el = document.getElementById('about');
+            el.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const sun = document.getElementById('sun');
+        const moon = document.getElementById('moon');
+        
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                moon.style.background = "url('switch/moon-white.svg') no-repeat center";
+                sun.style.background = "url('switch/sun-white.svg') no-repeat center";
+                moon.style.backgroundSize = "100%";
+                sun.style.backgroundSize = "100%";
+
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sun.style.background = "url('switch/sun.svg') no-repeat center";
+                moon.style.background = "url('switch/moon.svg') no-repeat center";
+                moon.style.backgroundSize = "100%";
+                sun.style.backgroundSize = "100%";
+
+            }
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
     </script>
 </body>
 
