@@ -207,6 +207,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-content: center;
     transition: transform .2s;
     border-radius: 3px;
 }
@@ -235,10 +236,11 @@ button:hover {
     margin-bottom: 40px;
 }
 
+
 .project-card footer ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    justify-content: center;
 }
 
 .project-card footer li {
@@ -338,4 +340,15 @@ button:hover {
   .sun, .moon {
     width: 17px;
     height: 17px;
+  }
+
+  @media only screen and (max-width: 880px) {
+
+
+    .project-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+
   }
