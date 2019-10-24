@@ -11,7 +11,6 @@
     --pink-gray: #444452;
     --whitesmoke: #444452;
     --slate: #444452;
-    --mono-font: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     --pro-font: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
     --mono-font: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 
@@ -129,8 +128,6 @@ button:hover {
     border: 1px solid;
     font-size: 14px;
     font-weight: 200;
-    align-self: start;
-    max-width: 15%;
     margin-top: 20px;
     grid-row: 3 / -1;
 }
@@ -165,7 +162,6 @@ button:hover {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, minmax(120px, 1fr));
     align-items: center;
-    /* margin-top: 30px; */
     height: 80vh;
 }
 
