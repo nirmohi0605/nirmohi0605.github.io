@@ -186,7 +186,7 @@ button:hover {
     /* padding-top: 20px; */
 }
 
-.projects h3 {
+.projects h3, .about h3 {
     text-align: center;
     color: var(--whitesmoke);
     margin-bottom: 40px;
@@ -347,7 +347,62 @@ button:hover {
     height: 17px;
   }
 
-  @media only screen and (max-width: 880px) {
+  .about {
+      margin: 80px 50px;
+  }
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 300px;
+    align-content: center;
+    grid-gap: 10px;
+  }
+
+  .about-text-container  {
+      padding: 40px;
+      background-color: var(--light-navy);
+      display: grid;
+      align-content: center;
+      border-radius: 3px;
+      line-height: 1.5;
+      color: var(--pink-gray);
+  }
+
+  .about-text-container > ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      list-style: none;
+      grid-gap: 10px;
+  }
+  .about-text-container ul li::before {
+    content: "👉";  
+    display: inline-block;
+    width: 1em; 
+    margin-left: -1em; 
+  }
+
+  .about-text-container li span {
+      padding-left: 6px;
+  }
+
+ 
+  .picture {
+      height: 300px;
+      width: 300px;
+      justify-self: center;
+      align-self: center;
+      filter: grayscale(3);
+  }
+
+  .picture:hover {
+      filter: grayscale(0);
+  }
+
+  .picture > img {
+    border-radius: 3px;
+  }
+  
+  @media only screen and (max-width: 768px) {
 
 
     .project-cards {
@@ -356,4 +411,13 @@ button:hover {
         grid-gap: 20px;
     }
 
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        
+      }
   }
+
+
