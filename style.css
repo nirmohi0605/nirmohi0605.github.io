@@ -356,6 +356,8 @@ button:hover {
     min-height: 300px;
     align-content: center;
     grid-gap: 10px;
+    overflow: auto;
+    justify-content: center;
   }
 
   .about-text-container  {
@@ -373,6 +375,7 @@ button:hover {
       grid-template-columns: 1fr 1fr;
       list-style: none;
       grid-gap: 10px;
+      grid-column-gap: 20px;
   }
   .about-text-container ul li::before {
     content: "👉";  
