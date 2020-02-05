@@ -275,14 +275,17 @@ button:hover {
     background-color: #42c9ff12;
 }
 
+
+/* Color theme switcher */
+
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
   
-    em {
+    /* em {
       margin-left: 10px;
       font-size: 1rem;
-    }
+    } */
   }
   .theme-switch {
     display: inline-block;
@@ -347,6 +350,7 @@ button:hover {
     height: 17px;
   }
 
+  /* About Section */
   .about {
       margin: 80px 50px;
   }
